@@ -1,0 +1,739 @@
+
+
+
+Testing : (QA / QE)
+
+To avoid the loss the business 
+
+Quality 
+Requirment 
+Defects 
+
+Whatsapp : 
+
+Requirment  Document  - Dev  - QA
+
+single tick - offline 
+double tick - online 
+blue tick 
+
+anaravinthh@outlook.com
+
+Manual Testing : Manual Intervation 
+
+Automation Testing : Script (Coding)
+
+Integrated Learning (Java + Selenium + Framework + Github + CI)
+
+30 hours 
+
+Automation Testing - coding (java)
+
+Amazon Prime (web Application , Mobile Apps , Desktop Application )
+
+web Application -> Web Browser (chrome , edge , safari , opera)
+
+Selenium - WebPage Automation Tool 
+
+Appium - Mobile Applications 
+
+UFT - Desktop Application 
+
+Selenium : Open Source Tool
+
+Features : 
+
+1. Multiple Browser : (Chrome , Edge , Safari )
+
+		Cross Browser Testing 
+
+2. Multiple Programming langauage 
+
+		Java , Python , JS , C# , Ruby 
+
+3. Multiple Operating system 
+		win , mac , linux 
+
+Installation : 
+
+Java - LTS (Long Term Support )
+
+IDE (Intergated Development Environemnt ) - Eclipse , Intellij , visual studio code , pycharm 
+
+Intellij + Eclipse 
+
+64 bit operating (win 10 & above)
+4 GB 
+
+https://www.jetbrains.com/idea/download/?section=windows
+
+
+Community Edition 
+
+Team --> Github (common Storage Area)
+
+https://github.com/
+
+----------------------------------------------
+
+21/05
+
+
+Configuration :
+
+Environemnt Variables : 
+
+home path - presence of the application 
+bin path 
+
+Game ---> Java 
+
+cmd 
+
+java --version 
+
+
+Maven Project :
+
+Binary zip archive
+
+ new open versioncontrol 
+ 
+ 
+ new 
+ 
+ 
+workspace -> local path (Github)
+
+Build System - Maven 
+
+Standards (Coding)
+
+Project ---> Package --> class --> method --> code 
+
+Naming Convention : 
+
+Java is case senstive language 
+
+a - 097
+A - 065 
+
+aravinth
+ARAVINTH 
+
+ASCII value 
+
+Package - lower case 
+class - pascal case 
+method /variable name - camel case 
+
+
+howareyou
+HowAreYou
+howAreYou (iPhone)
+
+coding : Human readable form 
+
+aravinth 
+
+Machine Readbale form (Binary value - 0 & 1)
+
+0110000101110010
+
+
+JVM (Java Virtual Machine)
+
+load 
+verfiy 
+exceute 
+
+JRE (Java RunTime Environment)
+
+execute - output (console)
+
+JDK - Java Devlopment Kid 
+
+
+src - source 
+
+src/main/java
+src/main/resources 
+src/test/java --> Test code 
+src/test/resources
+
+proper folder structure 
+
+Framework (Maven Project)
+
+
+main method -> 
+custom method 
+
+psvm
+
+numerical value 
+1. whole number 
+2. decimal number 
+
+character (single digit , single letter )
+
+Word / Sentence 
+
+Data Types :
+
+int 
+double 
+char - ''
+String - ""
+
+DataType VariableName = value ;
+
+VariableName - User Provided Name (Unique)
+
+int a = 100 ;
+
+Variable holds the value 
+
+int firstNumber = 500 ;
+
+print --> console output
+
+sout 
+
+------------------------------
+Selenium ?
+
+4.32.0 
+
+4.33.0 - update the latest jar 
+
+Jars ----> dependency
+
+Maven (mvn) : (Build Tool)
+
+pom.xml
+
+xml / html 
+
+tags :
+
+<a> - open tag 
+</a> - close tag
+
+<apple>    </apple>
+<aravinth>  </aravinth>
+
+<iphone>
+	<15>  </15>
+	<16>  </16>
+	<17>  </17>	
+</iphone>
+
+
+<dependencies>
+
+Repository (Storage Area)
+
+1. public Repo - anyone can access - mvnrepository 
+2. private Repo - need an access 
+3. Local Repo - our system 
+
+https://mvnrepository.com/
+
+
+load the pom.xml ---> public repo ---> download the jar to our system 
+
+
+.m2 -> act as local repo 
+
+
+frondend - UI (User Interface)
+backend - html code (Elements tab)
+
+F12 
+
+Locators 
+
+
+Selenium -> webpage Automation tool 
+
+Fronend - UI (User Interface )
+
+Backend - code (DOM - Document Object Model)
+
+java , python , angular JS - html layers 
+
+F12
+
+html / xml - remains same 
+
+
+tags - open tag <> , close tag </>
+
+<apple>   </apple>
+<windows>  </windows>
+
+<iphone>
+	<abc> id="123"</abc>
+	<15>  </15>
+</iphone>
+
+
+node / WebElement : Tag (starting point) + Elements + TextValue 
+
+<input class="input r4 wide mb16 mt8 username" type="email" value="" 
+name="username" id="username" aria-describedby="error" style="display: block;">
+
+
+<input - tag 
+
+class="input r4 wide mb16 mt8 username" - element (Attribute + value )
+type="email"
+value=""
+name="username"
+id="username"
+aria-describedby="error"
+style="display: block;"
+
+<input id="nav-search-submit-button" type="submit"
+ class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
+ 
+ Locators : Intract with the element 
+ 
+ Selenium Know - > 
+ 
+ 1. Manually - Jar files of selenium 
+ 
+ 4.33.0 -> delete the existing jars 
+ 4.34.0 --> add new jar files 
+ 
+ Maven : (Build Tool)
+ 
+ provides proper folder structure 
+ 
+ pom.xml --> 
+ 
+ Selenium dependecy 
+ cucmber dependecy
+ poi dependecy
+ 
+ <dependecencies>
+		Selenium dependecy
+		cucmber dependecy
+ </dependecencies>
+ 
+ mvnrepository 
+ 
+ reload - maven 
+ 
+-----------------------------------------
+
+Components of selenium (version of Selenium)
+
+1. Selenium IDE 
+2. Selenium WD 
+3. Selenium Grid 
+
+1. Selenium IDE  
+
+Record & Play back Testing 
+
+ Add plugin 
+ 
+ command - user actions 
+ target 
+ value - input 
+ 
+ Command Line Runner 
+ 
+ 1. customization 
+ 2. validation 
+ 
+ 
+ 2. Selenium RC (Remote Control) --> Selenium WebDriver 
+ 
+	severs & libraries 
+ 
+	code customaization 
+	validation 
+	sync 
+	
+Selenium WebDriver 	
+ 
+ 3. Selenium Grid (Parallel execution )
+ 
+		
+ WebDriver ---> Interface / class ---> Pascal case 
+		
+ 
+ Conditions of Java : 
+ 
+ if , else if , else , switch 
+ 
+ if(condition - true / false ){
+		
+		statments 
+ }
+ else{
+	statments 
+ }
+ operators of Java : + - * / < > <= >= == !=
+ 
+ int a = 45 ; 
+ 
+ if (a > 50 ){
+ 
+ }
+ 
+ break points / debug points 
+ 
+ name = "lmti" 
+ name1 = "LMTI"
+ 
+ Class --> methods 
+ 
+ ----------------------------------------------------------
+ 
+ Selenium WebDriver : 
+ 
+ WebDriver is an interface 
+ 
+ Interface ? (OOPS )
+ 
+ 
+ Mobile Phone : 
+ 
+ SIM  ---> Network provider --> call , sms , internet 
+ 
+ Sim port ----> Interface 
+ 
+ Airtel 
+ Jio 
+ Bsnl 
+ 
+ Interface is used to set the standards 
+ 
+ call()
+ sms()
+ internet()
+ 
+ empty methods  / signuature body 
+ 
+ class contains method 
+ 
+ Airtel --> calls() { ...} , sms(){...} , internet(){...} 
+ Jio -->   calls() { ...} , sms(){...} , internet(){...}
+ Bsnl -->  calls() { ...} , sms(){...} , internet(){...}
+ 
+ 
+ Implementing the class 
+ 
+ 
+ Creating the object : allocate some memory 
+ 
+ Ex : Kitchen  - salt() , pepper() , chillyPowder() (dedicated for space)
+ 
+ new 
+ 
+ Kitchen k = new Kitchen();
+ k.salt();
+ 
+ Aravinth a = new Aravinth();
+ 
+ LearnMore lmti = new LearnMore();
+ 
+ we can't create an object for the interface , implementing the interface with the help of the class --> method
+ 
+ SimPort s = new Bsnl() ;
+ 
+ s.call()
+ s.sms()
+ s.internet()
+ 
+ Multiple Browser Testing : 
+ 
+ Chrome --> ChromeDriver --> get() {} , findElement() {}
+ Edge  --> EdgeDriver
+ Safari --> SafariDriver
+ Opera 
+ 
+  
+ WebDriver (Interface)
+ 
+ get()
+ findElement() 
+ 
+ WebDriver driver = new ChromeDriver();
+ 
+ 
+ code --http protcol--WebDriver---http protcol-->Browser 
+ 
+ 
+ Browser Invocation  ---> WebDriver 
+
+-------------------------------
+
+launch the browser ---> open URL 
+
+get() -- pass the URL value 
+
+1. Paramterized method --> used need to pass the input (argument) 
+
+		sample(int a){
+		}
+		
+		1 P - 1 A 
+		
+		sample(34)
+		
+		sample(String a){
+		}
+		
+		sample("xyz")
+		
+		sample(int a ,String b){
+		}
+		
+		2 P - 2 A 
+		
+		sample (11,"abc")
+
+2. non Paramterized method --> no input is required 
+
+		sameple() - zero parameter 
+
+Exception in thread :  
+
+org.openqa.selenium.InvalidArgumentException: invalid argument
+
+
+Locators : find the elements 
+
+class holds the method --> By Class 
+
+1. id() ----> looks only for id values  
+2. name() --> looks only for name elements 
+3. className() ---> looks only for class elements 
+4. xpath() 
+5. cssSelector() 
+6. tagName() 
+7. linkText() 
+8. partialLinkText()
+
+
+Action :
+
+input - sendKeys()
+click - click()
+extract the text - getText()
+
+findElement() - picks the first matching result 
+
+//tagname[@attribute='value']
+
+//input[@id='Login']
+
+
+ctrl + F 
+
+//div[@class='loginError']
+
+void --> no ouput 
+
+Framework : Execution System 
+
+200 Scenarios --> Run + Maintain our code 
+
+Maven Project - Build Tool 
+
+BA, Dev , QA 
+
+Test Design - Coding - Execution (locally / Servers (CI - Jenkins ))
+
+Cucumber BDD 
+TestNG -Coding (page object Model) - Execution - Raw coding 
+Junit - Coding - Execution 
+
+BDD (Behaviour Driven Development )
+
+Gherkin (Plain English) - plugin 
+
+Scenario: -> 
+(Test Steps)
+Given - pre request
+When - user actions
+Then - validation 
+And 
+
+Test Data - "" 
+
+Test Design - write down  all possible scenarios 
+
+1. login with valid credi 
+2. login with invalid credi 
+3. forget your password 
+4. label names 
+
+Scenario: user validate the login functionaity with valid credi 
+	Given user navigates to salesforce login page 
+	When user enters the username "jak" and password "hello"
+	And user clicks the login button 
+	Then verify whether the user naviages to the home page 
+
+Scenario: user validate the login functionaity with invalid credi
+	Given user navigates to salesforce login page 
+	When user enters the username "mac" and password "123"
+	And user clicks the login button 
+	Then verify the error message 
+
+Scenario: user validate the forget your password functionaity 
+
+Scenario: Label name validations 
+
+Scenario: Search function validation 
+	Given user naviages to amazon home page ----> map the automation code 
+	When user enter the product name "iphone" in search box 
+	And user clicks on search icon 
+	Then verify the search result 
+	And verify the title of the current page 
+
+Cucumber BDD  Framework : 
+
+3 Important files :
+
+Design --> Feature File ----> .feature 
+Coding --> Step Definition File -> Java class file 
+Execution --> Runner File 
+
+Plugin - Gherkin , cucumber for java , cucumber +
+
+
+test/java - Automation coding 
+test/resources - suppotive files of test java (Test Design)
+
+
+Feature Wise :
+
+Group chat -------> 10 Scenario
+Broadcasting --> 15 Scenarios 
+Payments 
+
+Undefined step reference
+
+Single Scenarios 
+Test Suite 
+All the scenarios 
+
+
+Annoations : @
+
+Given - @Given 
+When - @When 
+Then - @Then 
+And - @And 
+
+
+Scenario Outline: 
+
+
+Examples: Data Table | |
+
+Local Variable - inside the method 
+
+Global variable 
+
+#twotabsearchtextbox
+
+Conditions of Java / Assertions 
+
+
+@RunWith() - junit  
+
+@CucmberOptions() --> default methods 
+
+feature - path of feature file 
+glue - path of step def 
+
+
+io.cucumber.junit.UndefinedStepException
+
+tags - @
+
+
+GitHub Repository:
+
+temp data - Target 
+
+Maven commands 
+
+GitHub Desktop 
+
+sync github id with github desktop (clone , commit , review our changes )
+
+.gitIgnore
+
+
+Array : Store the multiple variables of similar data type 
+
+int a = 1,2,3,4 ;
+
+[]
+
+int [] a = {1,2,3,4,5};
+
+index order - 0 
+
+a[index]
+
+a[0]
+a[3]
+
+ArrayIndexOutOfBoundsException
+
+
+Loops : Repative action 
+
+for , while , do while 
+
+int [] a = {1,2,3,4,5};
+
+for(initilazation ; condition ; increment){
+
+}
+
+++ increment  --> +1
+-- decrement ---> -1
+
+for(int i = 0 ; 5 < 5 ; i++){
+
+		a[2] - 2
+} 
+
+
+break point / debug points - execution will under our control 
+
+
+class name  
+
+org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+
+Compound class - more than one class 
+
+nav-input nav-progressive-attribute
+
+//input[@class='nav-input nav-progressive-attribute']
+
+xpath : Any of the attitbute & its value 
+
+Regular Expression of Xpath : 
+
+//tagname[@attribute='value']
+
+//input[@type='submit']
+
+//input[@id='twotabsearchtextbox']
+
+1. Absolute Xpath 
+2. Relative Xpath 
+
+
