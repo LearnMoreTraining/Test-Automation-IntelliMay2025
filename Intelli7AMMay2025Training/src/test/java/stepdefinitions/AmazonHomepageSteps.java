@@ -1,0 +1,41 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AmazonHomepageSteps {
+   WebDriver driver;
+    @Given("user naviagtes to Amazon Home Page")
+    public void homePage(){
+        driver = new ChromeDriver();
+        driver.get("https://www.amazon.in/");
+    }
+
+    @When("user enter the product name {string} in search box")
+    public void enterProductName(String value) {
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
+    }
+
+    @Then("verify the search result")
+    public void verifySearchResult() {
+    }
+
+    @And("user clicks on search icon")
+    public void clicksSearchIcon() {
+        driver.findElement(By.id("nav-search-submit-button")).click();
+    }
+
+    @And("verify the title of the current page")
+    public void verifyTheTitle() {
+
+        String title = driver.getTitle();
+        System.out.println(title);
+    }
+
+
+}
