@@ -18,7 +18,10 @@ public class AmazonHomepageSteps {
 
     @When("user enter the product name {string} in search box")
     public void enterProductName(String value) {
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
+      //  driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
+     //   driver.findElement(By.className("nav-input nav-progressive-attribute")).sendKeys(value);
+     //   driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys(value);
+        driver.findElement(By.xpath("//input[@class='nav-input nav-progressive-attribute']")).sendKeys(value);
     }
 
     @Then("verify the search result")
@@ -27,7 +30,8 @@ public class AmazonHomepageSteps {
 
     @And("user clicks on search icon")
     public void clicksSearchIcon() {
-        driver.findElement(By.id("nav-search-submit-button")).click();
+      //  driver.findElement(By.id("nav-search-submit-button")).click();
+        driver.findElement(By.xpath("//input[@type='submit']")).click();
     }
 
     @And("verify the title of the current page")

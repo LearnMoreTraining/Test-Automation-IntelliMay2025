@@ -7,7 +7,6 @@ public class LoopsExample {
         int [] a = {56,22,11,44};
 
         for(int h=0; h < a.length ; h++ ){
-
             System.out.println(a[h]);
         }
 
