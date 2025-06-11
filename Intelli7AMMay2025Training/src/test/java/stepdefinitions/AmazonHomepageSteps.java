@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AmazonHomepageSteps {
@@ -42,4 +43,21 @@ public class AmazonHomepageSteps {
     }
 
 
+    @When("user extracts dropdown values")
+    public void userExtractsDropdownValues() {
+
+        WebElement catergoryDropdown = driver.findElement(By.id("searchDropdownBox"));
+        int size = catergoryDropdown.findElements(By.tagName("option")).size();
+
+           for(int i = 0 ; i < size ; i++){
+              String val = catergoryDropdown.findElements(By.tagName("option")).get(i).getText();
+               System.out.println(val);
+           }
+
+    }
+
+    @Then("user validate the office product value in the dropdown")
+    public void userValidateTheOfficeProductValueInTheDropdown() {
+
+    }
 }

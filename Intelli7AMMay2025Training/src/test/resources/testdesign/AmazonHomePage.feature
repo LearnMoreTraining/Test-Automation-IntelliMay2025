@@ -21,3 +21,12 @@ Scenario Outline: Search function with Multiple data
     | iphone       |
     | Mouse        |
     | Keyboard     |
+
+    @SC03
+  Scenario: Dropdown Validation
+    Given user naviagtes to Amazon Home Page
+    When user extracts dropdown values
+    Then user validate the office product value in the dropdown
+
+
+
