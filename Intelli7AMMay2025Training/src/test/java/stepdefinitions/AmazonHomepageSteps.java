@@ -54,6 +54,8 @@ public class AmazonHomepageSteps {
                System.out.println(val);
            }
 
+        System.out.println("hello");
+
     }
 
     @Then("user validate the office product value in the dropdown")
