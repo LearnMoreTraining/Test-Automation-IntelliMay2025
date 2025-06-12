@@ -23,11 +23,15 @@ Scenario Outline: Search function with Multiple data
     | Keyboard     |
 
     @SC03
-  Scenario: Dropdown Validation
+  Scenario: static Dropdown Validation
     Given user naviagtes to Amazon Home Page
     When user extracts dropdown values
     And user select value from the dropdown
     Then user validate the office product value in the dropdown
 
+      @SC04
+  Scenario: Dynamic Dropdown Handling
+    Given user navigates to Spice jet
+    When user select values from the dropdown
 
 
