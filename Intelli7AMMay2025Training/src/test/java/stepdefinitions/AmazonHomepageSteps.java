@@ -62,4 +62,21 @@ public class AmazonHomepageSteps {
     public void userValidateTheOfficeProductValueInTheDropdown() {
 
     }
+
+    @Given("user navigates to Spice jet")
+    public void userNavigatesToSpiceJet() {
+
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://book.spicejet.com/");
+
+    }
+
+    @When("user select values from the dropdown")
+    public void userSelectValuesFromTheDropdown() {
+
+        driver.findElement(By.id("ControlGroupSearchView_AvailabilitySearchInputSearchVieworiginStation1_CTXT")).click();
+        driver.findElement(By.xpath("//a[@value='MAA']")).click();
+        driver.findElement(By.xpath("//div[@id='glsControlGroupSearchView_AvailabilitySearchInputSearchViewdestinationStation1_CTNR']/descendant::a[@value='BOM']")).click();
+    }
 }
