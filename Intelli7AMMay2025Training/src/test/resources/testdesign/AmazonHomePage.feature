@@ -26,6 +26,7 @@ Scenario Outline: Search function with Multiple data
   Scenario: static Dropdown Validation
     Given user naviagtes to Amazon Home Page
     When user extracts dropdown values
+    And user select value from the dropdown
     Then user validate the office product value in the dropdown
 
       @SC04
