@@ -8,9 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class AmazonHomepageSteps {
    WebDriver driver;
+    WebElement catergoryDropdown;
     @Given("user naviagtes to Amazon Home Page")
     public void homePage(){
         driver = new ChromeDriver();
@@ -46,7 +48,7 @@ public class AmazonHomepageSteps {
     @When("user extracts dropdown values")
     public void userExtractsDropdownValues() {
 
-        WebElement catergoryDropdown = driver.findElement(By.id("searchDropdownBox"));
+        catergoryDropdown = driver.findElement(By.id("searchDropdownBox"));
         int size = catergoryDropdown.findElements(By.tagName("option")).size();
 
            for(int i = 0 ; i < size ; i++){
@@ -59,5 +61,17 @@ public class AmazonHomepageSteps {
     @Then("user validate the office product value in the dropdown")
     public void userValidateTheOfficeProductValueInTheDropdown() {
 
+    }
+
+    @And("user select value from the dropdown")
+    public void userSelectValueFromTheDropdown() {
+
+        Select catergoryDrop = new Select(catergoryDropdown);
+       // catergoryDrop.selectByVisibleText("Electronics");
+       // catergoryDrop.selectByIndex(5);
+        catergoryDrop.selectByValue("search-alias=furniture");
+
+     //   Select a = new Select(driver.findElement(By.id("ControlGroupSearchView_AvailabilitySearchInputSearchView_DropDownListPassengerType_ADT")));
+     //   a.selectByVisibleText("2");
     }
 }
