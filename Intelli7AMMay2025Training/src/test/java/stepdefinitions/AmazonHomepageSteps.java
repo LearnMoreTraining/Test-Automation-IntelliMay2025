@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import pageobjects.AmazonHomePage;
 
 import java.io.IOException;
 
@@ -24,10 +25,9 @@ public class AmazonHomepageSteps {
 
     @When("user enter the product name {string} in search box")
     public void enterProductName(String value) {
-      //  driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
-     //   driver.findElement(By.className("nav-input nav-progressive-attribute")).sendKeys(value);
-     //   driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys(value);
-        driver.findElement(By.xpath("//input[@class='nav-input nav-progressive-attribute']")).sendKeys(value);
+
+        AmazonHomePage homePage = new AmazonHomePage(driver);
+        homePage.enterProductValue(value);
     }
 
     @Then("verify the search result")
@@ -36,13 +36,12 @@ public class AmazonHomepageSteps {
 
     @And("user clicks on search icon")
     public void clicksSearchIcon() {
-      //  driver.findElement(By.id("nav-search-submit-button")).click();
-        driver.findElement(By.xpath("//input[@type='submit']")).click();
+      AmazonHomePage homePage = new AmazonHomePage(driver);
+      homePage.clickSearchIcon();
     }
 
     @And("verify the title of the current page")
     public void verifyTheTitle() {
-
         String title = driver.getTitle();
         System.out.println(title);
     }
