@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import base.BrowserBase;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,13 +11,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 public class AmazonHomepageSteps {
    WebDriver driver;
     WebElement catergoryDropdown;
     @Given("user naviagtes to Amazon Home Page")
-    public void homePage(){
-        driver = new ChromeDriver();
-        driver.get("https://www.amazon.in/");
+    public void homePage() throws IOException {
+        BrowserBase base = new BrowserBase();
+       driver = base.launchBrowser();
     }
 
     @When("user enter the product name {string} in search box")
