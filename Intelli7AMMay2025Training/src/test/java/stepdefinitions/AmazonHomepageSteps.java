@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import base.BrowserBase;
+import base.PageObjectManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,23 +12,28 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import pageobjects.AmazonHomePage;
+import pageobjects.SearchResultPage;
 
 import java.io.IOException;
 
 public class AmazonHomepageSteps {
    WebDriver driver;
     WebElement catergoryDropdown;
+    PageObjectManager pageObjectManager;
+
     @Given("user naviagtes to Amazon Home Page")
     public void homePage() throws IOException {
         BrowserBase base = new BrowserBase();
-       driver = base.launchBrowser();
+        driver = base.launchBrowser();
+        pageObjectManager = new PageObjectManager(driver);
     }
 
     @When("user enter the product name {string} in search box")
     public void enterProductName(String value) {
 
-        AmazonHomePage homePage = new AmazonHomePage(driver);
-        homePage.enterProductValue(value);
+    //    AmazonHomePage homePage = new AmazonHomePage(driver);
+     //   homePage.enterProductValue(value);
+        pageObjectManager.getAmazonHomePage().enterProductValue(value);
     }
 
     @Then("verify the search result")
@@ -36,14 +42,18 @@ public class AmazonHomepageSteps {
 
     @And("user clicks on search icon")
     public void clicksSearchIcon() {
-      AmazonHomePage homePage = new AmazonHomePage(driver);
-      homePage.clickSearchIcon();
+   //   AmazonHomePage homePage = new AmazonHomePage(driver);
+   //   homePage.clickSearchIcon();
+        pageObjectManager.getAmazonHomePage().clickSearchIcon();
     }
 
     @And("verify the title of the current page")
     public void verifyTheTitle() {
         String title = driver.getTitle();
         System.out.println(title);
+    //    SearchResultPage s = new SearchResultPage(driver);
+     //   s.selectProduct();
+        pageObjectManager.getSearchResultPage().selectProduct();
     }
 
 
@@ -93,5 +103,19 @@ public class AmazonHomepageSteps {
         driver.findElement(By.xpath("//a[@value='MAA']")).click();
         driver.findElement(By.xpath("//div[@id='glsControlGroupSearchView_AvailabilitySearchInputSearchViewdestinationStation1_CTNR']/descendant::a[@value='BOM']")).click();
     }
-    
+
+    @When("user clicks on baby wish list")
+    public void userClicksOnBabyWishList() {
+
+        pageObjectManager.getAmazonHomePage().clickBabyWishList();
+
     }
+
+    @Then("validate the navigation")
+    public void validateTheNavigation() {
+
+      boolean a=  pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent();
+        System.out.println(a);
+        pageObjectManager.getBabyWishListPage().enterBabyProductValue("dress");
+    }
+}
