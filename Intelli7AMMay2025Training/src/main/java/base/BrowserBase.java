@@ -16,24 +16,24 @@ public class BrowserBase {
     WebDriver driver ;
     public WebDriver launchBrowser() throws IOException {
      //   File f = new File("src/main/resources/frameworkconfi.properties");
-        FileInputStream fis = new FileInputStream(new File("src/main/resources/config/frameworkconfi.properties"));
-        Properties prop = new Properties();
-        prop.load(fis);
+        if(driver == null) {
 
-        if(prop.getProperty("browser").equalsIgnoreCase("chrome")){
-             driver = new ChromeDriver();
+            FileInputStream fis = new FileInputStream(new File("src/main/resources/config/frameworkconfi.properties"));
+            Properties prop = new Properties();
+            prop.load(fis);
+
+            if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
+                driver = new ChromeDriver();
+            } else if (prop.getProperty("browser").equalsIgnoreCase("edge")) {
+                driver = new EdgeDriver();
+            } else if (prop.getProperty("browser").equalsIgnoreCase("safari")) {
+                driver = new SafariDriver();
+            } else {
+                throw new InvalidArgumentException("Configure Valid browser");
+            }
+            driver.manage().window().maximize();
+            driver.get(prop.getProperty("url"));
         }
-        else if (prop.getProperty("browser").equalsIgnoreCase("edge")){
-            driver = new EdgeDriver();
-        }
-        else if(prop.getProperty("browser").equalsIgnoreCase("safari")){
-            driver = new SafariDriver();
-        }
-        else{
-            throw new InvalidArgumentException("Configure Valid browser");
-        }
-        driver.manage().window().maximize();
-        driver.get(prop.getProperty("url"));
 
         return driver;
     }
