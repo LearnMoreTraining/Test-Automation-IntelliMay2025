@@ -36,7 +36,6 @@ Scenario Outline: Search function with Multiple data
 
         @sc05
   Scenario: Mouse Action
-    Given user naviagtes to Amazon Home Page
-    When user clicks on baby wish list
+    Given user clicks on baby wish list
     Then validate the navigation
 

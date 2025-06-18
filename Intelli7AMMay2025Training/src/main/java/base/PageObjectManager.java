@@ -33,4 +33,9 @@ public class PageObjectManager {
         BabyWishListPage wishListPage = new BabyWishListPage(driver);
         return wishListPage;
     }
+
+    public WikiPage getWikiPage(){
+        WikiPage wikiPage = new WikiPage(driver);
+        return wikiPage;
+    }
 }

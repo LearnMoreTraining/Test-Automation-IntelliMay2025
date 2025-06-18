@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -101,15 +102,14 @@ public class AmazonHomepageSteps {
     @When("user clicks on baby wish list")
     public void userClicksOnBabyWishList() {
 
-      //  pageObjectManager.getAmazonHomePage().clickBabyWishList();
+        context.pageObjectManager.getAmazonHomePage().clickBabyWishList();
 
     }
 
     @Then("validate the navigation")
     public void validateTheNavigation() {
-
-//      boolean a=  pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent();
-//        System.out.println(a);
-//        pageObjectManager.getBabyWishListPage().enterBabyProductValue("dress");
+            Assert.assertFalse(context.pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent());
+  //Assert.assertTrue( context.pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent());
+     //   context.pageObjectManager.getBabyWishListPage().enterBabyProductValue("dress");
     }
 }
