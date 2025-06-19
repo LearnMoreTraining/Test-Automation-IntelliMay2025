@@ -1,5 +1,7 @@
 package pageobjects;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class SearchResultPage {
@@ -13,7 +15,8 @@ public class SearchResultPage {
 
     }
 
-    public void selectProduct(){
+    public void selectProduct(String value){
 
+            driver.findElement(By.xpath("//div[@data-cel-widget='search_result_"+value+"']/descendant::a[2]")).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
     }
 }

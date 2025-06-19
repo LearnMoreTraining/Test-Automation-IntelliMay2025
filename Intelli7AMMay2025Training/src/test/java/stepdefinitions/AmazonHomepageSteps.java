@@ -112,4 +112,19 @@ public class AmazonHomepageSteps {
   //Assert.assertTrue( context.pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent());
      //   context.pageObjectManager.getBabyWishListPage().enterBabyProductValue("dress");
     }
+
+    @Given("user search the product")
+    public void userSearchTheProduct() {
+        context.pageObjectManager.getAmazonHomePage().enterProductValue("laptop").clickSearchIcon();
+    }
+
+    @When("user select the specific product")
+    public void userSelectTheSpecificProduct() {
+        context.pageObjectManager.getSearchResultPage().selectProduct("4");
+    }
+
+    @Then("verify the title of page")
+    public void verifyTheTitleOfPage() {
+
+    }
 }

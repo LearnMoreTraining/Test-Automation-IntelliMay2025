@@ -39,3 +39,24 @@ Scenario Outline: Search function with Multiple data
     Given user clicks on baby wish list
     Then validate the navigation
 
+  @sc06
+  Scenario: Window Handling
+    Given user search the product
+    When user select the specific product
+    Then verify the title of page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
