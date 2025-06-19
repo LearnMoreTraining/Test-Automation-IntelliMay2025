@@ -2,7 +2,11 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class WikiPage {
     WebDriver driver;
@@ -10,19 +14,34 @@ public class WikiPage {
         this.driver = driver;
     }
 
-    public void getShareHolderValue(){
+    public List<String> getShareHolderValue(){
+        List<String> shareholderValue = new ArrayList<String>();
        int size  = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[1]")).size();
        for(int i =0 ; i < size ; i++){
           String val = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[1]")).get(i).getText();
-           System.out.println(val);
+           shareholderValue.add(val);
        }
+       return shareholderValue;
     }
 
-    public void getShareHoldingValue(){
+    public List<String> getShareHoldingValue(){
+        List<String> shareholdingValue = new ArrayList<String>();
         int size  = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[2]")).size();
         for(int i =0 ; i < size ; i++){
-            String val = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[2]")).get(i).getText();
-            System.out.println(val);
+            shareholdingValue.add( driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[2]")).get(i).getText());
         }
+        return shareholdingValue;
+    }
+
+    public Map<String, String> getShareholderShareholdingValue(){
+
+        Map<String,String> m = new HashMap<String,String>();
+        int size  = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[1]")).size();
+        for(int i =0 ; i < size ; i++){
+            String col1Val = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[1]")).get(i).getText();
+            String col2Val = driver.findElements(By.xpath("//table[@class='wikitable sortable jquery-tablesorter']/tbody/tr/td[2]")).get(i).getText();
+            m.put(col1Val,col2Val);
+        }
+        return m;
     }
 }

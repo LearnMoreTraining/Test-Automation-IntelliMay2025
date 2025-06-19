@@ -12,6 +12,10 @@ public class ArrayExample {
         System.out.println(name[1]);
         System.out.println(a.length);
 
+        for(int c:a){
+            System.out.println(c);
+        }
+
     }
 
 }

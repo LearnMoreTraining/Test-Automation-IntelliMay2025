@@ -15,5 +15,9 @@ public class LoopsExample {
         for(int d=0 ; d < name.length ; d++){
             System.out.println(name[d]);
         }
+
+        for(String d:name){
+            System.out.println(d);
+        }
     }
 }
