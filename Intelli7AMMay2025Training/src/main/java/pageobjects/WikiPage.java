@@ -2,11 +2,11 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.Duration;
+import java.util.*;
 
 public class WikiPage {
     WebDriver driver;
@@ -43,5 +43,23 @@ public class WikiPage {
             m.put(col1Val,col2Val);
         }
         return m;
+    }
+
+    public String getLearnMoreText(){
+        driver.findElement(By.id("quote")).click();
+        String message = null ;
+        try{
+            message= driver.findElement(By.xpath("//*[text()='Hello, Learn More Aspirants']")).getText(); //implicit
+        }
+        catch(NoSuchElementException e){
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            wait.pollingEvery(Duration.ofSeconds(5));
+            wait.ignoring(NoSuchElementException.class);
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[text()='Hello, Learn More Aspirants']")));
+            message= driver.findElement(By.xpath("//*[text()='Hello, Learn More Aspirants']")).getText();
+        }
+
+        return message;
+
     }
 }
