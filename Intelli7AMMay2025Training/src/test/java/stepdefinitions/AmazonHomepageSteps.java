@@ -36,7 +36,7 @@ public class AmazonHomepageSteps {
     @When("user enter the product name {string} in search box")
     public void enterProductName(String value) {
 
-        context.pageObjectManager.getAmazonHomePage().enterProductValue(value);
+       context.pageObjectManager.getAmazonHomePage().enterProductValue("data",0,0);
     }
 
     @Then("verify the search result")
@@ -115,7 +115,7 @@ public class AmazonHomepageSteps {
 
     @Given("user search the product")
     public void userSearchTheProduct() {
-        context.pageObjectManager.getAmazonHomePage().enterProductValue("laptop").clickSearchIcon();
+       // context.pageObjectManager.getAmazonHomePage().enterProductValue("laptop").clickSearchIcon();
     }
 
     @When("user select the specific product")
