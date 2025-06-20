@@ -102,15 +102,15 @@ public class AmazonHomepageSteps {
     @When("user clicks on baby wish list")
     public void userClicksOnBabyWishList() {
 
-        context.pageObjectManager.getAmazonHomePage().clickBabyWishList();
+        context.pageObjectManager.getAmazonHomePage().clickBabyWishList().switchWindow();
 
     }
 
     @Then("validate the navigation")
     public void validateTheNavigation() {
             Assert.assertFalse(context.pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent());
-  //Assert.assertTrue( context.pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent());
-     //   context.pageObjectManager.getBabyWishListPage().enterBabyProductValue("dress");
+        //Assert.assertTrue( context.pageObjectManager.getBabyWishListPage().isBabyWishListIsPresent());
+        //  context.pageObjectManager.getBabyWishListPage().enterBabyProductValue("dress");
     }
 
     @Given("user search the product")
