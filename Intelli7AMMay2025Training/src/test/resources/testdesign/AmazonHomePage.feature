@@ -1,7 +1,7 @@
 @hiii
 Feature: Amazon Home Page Validation
 
- @sc01 @amazon @hello
+ @sc01 @amazon @hello @regression
 Scenario: Search function
   Given user naviagtes to Amazon Home Page
   When user enter the product name "iphone" in search box
@@ -9,7 +9,7 @@ Scenario: Search function
   Then verify the search result
   And verify the title of the current page
 
-   @sc02 @amazon
+   @sc02 @amazon @regression
 Scenario Outline: Search function with Multiple data
   Given user naviagtes to Amazon Home Page
   When user enter the product name "<Product Name>" in search box
@@ -22,7 +22,7 @@ Scenario Outline: Search function with Multiple data
     | Mouse        |
     | Keyboard     |
 
-    @SC03
+    @SC03 @regression
   Scenario: static Dropdown Validation
     Given user naviagtes to Amazon Home Page
     When user extracts dropdown values
