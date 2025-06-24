@@ -42,6 +42,15 @@ public class WikiSteps {
         WebElement drop =  testContext.browserBase.launchBrowser().findElement(By.id("droppable"));
         s.dragAndDrop(drag,drop).build().perform();
         testContext.browserBase.launchBrowser().switchTo().defaultContent();
-        
+
+        testContext.browserBase.launchBrowser().switchTo().alert().accept();
+        testContext.browserBase.launchBrowser().switchTo().alert().dismiss();
+        testContext.browserBase.launchBrowser().switchTo().alert().sendKeys("");
+        testContext.browserBase.launchBrowser().switchTo().alert().accept();
+        testContext.browserBase.launchBrowser().switchTo().alert().getText();
+
+        Assert.assertEquals("I am an alert box!", testContext.browserBase.launchBrowser().switchTo().alert().getText());
+
+
     }
 }
