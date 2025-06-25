@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class AmazonHomePage {
 
-    WebDriver driver ; //null knowledge
+    private WebDriver driver ; //null knowledge
 
     public AmazonHomePage(WebDriver driver){
         this.driver = driver;

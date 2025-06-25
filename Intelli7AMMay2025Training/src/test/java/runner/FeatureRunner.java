@@ -9,12 +9,13 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
        features = {"src/test/resources/testdesign","src/test/resources/alphatests"},
-        glue = {"stepdefinitions"},
-        tags = "@drag",
+        glue = {"stepdefinitions","hooks"},
+        tags = "@sc01",
         plugin = {"pretty",
                       "html:target/reports/report.html",
                       "json:target/reports/report.json",
-                     "junit:target/reports/report.xml"
+                     "junit:target/reports/report.xml",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
 )
 

@@ -1,13 +1,25 @@
 @hiii
 Feature: Amazon Home Page Validation
 
+  #@before
  @sc01 @amazon @hello @regression
 Scenario: Search function
+   #@beforestep
   Given user naviagtes to Amazon Home Page
+   #@afterstep
+   #@beforestep
   When user enter the product name "iphone" in search box
+      #@afterstep
+   #@beforestep
   And user clicks on search icon
+      #@afterstep
+   #@beforestep
   Then verify the search result
+      #@afterstep
+   #@beforestep
   And verify the title of the current page
+      #@afterstep
+   #@after
 
    @sc02 @amazon @regression
 Scenario Outline: Search function with Multiple data
