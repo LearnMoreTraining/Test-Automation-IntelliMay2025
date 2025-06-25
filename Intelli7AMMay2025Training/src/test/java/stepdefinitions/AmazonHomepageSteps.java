@@ -36,7 +36,9 @@ public class AmazonHomepageSteps {
     @When("user enter the product name {string} in search box")
     public void enterProductName(String value) {
 
-       context.pageObjectManager.getAmazonHomePage().enterProductValue("data",0,0);
+      // context.pageObjectManager.getAmazonHomePage().enterProductValue("data",0,0);
+        context.pageObjectManager.getAmazonHomePage().enterProductValue("product","data");
+        context.m.put("pie","3.14");
     }
 
     @Then("verify the search result")
@@ -47,6 +49,7 @@ public class AmazonHomepageSteps {
 
     @And("verify the title of the current page")
     public void verifyTheTitle() {
+        Assert.assertEquals(context.m.get("pie"),context.browserBase.launchBrowser().findElement(By.cssSelector("")).getText());
 
 
     }

@@ -1,6 +1,7 @@
 package pageobjects;
 
 import base.ExcelHandler;
+import base.PropertyFilehandler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -21,13 +22,18 @@ public class AmazonHomePage {
         this.driver = driver;
     }
 
-//    public AmazonHomePage enterProductValue(String value){
-//          driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
-//          return this;
-//    }
+    public AmazonHomePage enterProductValue(String value){
+          driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
+          return this;
+    }
 
     public AmazonHomePage enterProductValue(String name , int row , int col){
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys(ExcelHandler.getExcelData(name , row , col));
+        return this;
+    }
+
+    public AmazonHomePage enterProductValue(String name, String file){
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(PropertyFilehandler.getData(name,file));
         return this;
     }
 

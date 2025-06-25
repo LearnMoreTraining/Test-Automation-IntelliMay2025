@@ -20,7 +20,6 @@ public class SaleForceSteps {
     @And("user clicks on search icon")
     public void clicksSearchIcon() {
             context.pageObjectManager.getAmazonHomePage().clickSearchIcon();
-
     }
 
 }
