@@ -20,7 +20,7 @@ public class Hooks {
 
     @After
     public void closeDriver(){
-       context.browserBase.launchBrowser().quit();
+      context.browserBase.launchBrowser().quit();
     }
 
     @AfterStep

@@ -1,13 +1,11 @@
 Feature: Sales Force Login Page
 
+  @Sales1
   Scenario Outline: login validation
     Given user enter username "<User Name>" and password "<Password>"
-
     Examples:
       | User Name | Password |
       | abc       | xyz      |
-      | jak       | xyx      |
-      | ram       |asd       |
 
     @amazon
   Scenario: label name validation

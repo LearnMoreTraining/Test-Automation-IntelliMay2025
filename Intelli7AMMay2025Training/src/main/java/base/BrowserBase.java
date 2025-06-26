@@ -29,7 +29,8 @@ public class BrowserBase {
                 throw new InvalidArgumentException("Configure Valid browser");
             }
             driver.manage().window().maximize();
-            driver.get(PropertyFilehandler.getData("url","framework"));
+          //  driver.get(PropertyFilehandler.getData("url","framework"));
+            driver.navigate().to(PropertyFilehandler.getData("url","framework"));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
 
