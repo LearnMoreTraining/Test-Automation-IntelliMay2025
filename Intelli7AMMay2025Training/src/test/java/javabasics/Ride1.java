@@ -4,7 +4,7 @@ public class Ride1 {
 
   protected static int a = 100;
 
-   public void m1(){
-
+   public static void m1(){
+       System.out.println("Ride1");
    }
 }

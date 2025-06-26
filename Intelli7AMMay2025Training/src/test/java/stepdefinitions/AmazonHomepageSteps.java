@@ -43,6 +43,8 @@ public class AmazonHomepageSteps {
 
     @Then("verify the search result")
     public void verifySearchResult() {
+
+
     }
 
 

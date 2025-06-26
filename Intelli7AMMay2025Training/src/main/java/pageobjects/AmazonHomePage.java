@@ -2,10 +2,7 @@ package pageobjects;
 
 import base.ExcelHandler;
 import base.PropertyFilehandler;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,7 +20,20 @@ public class AmazonHomePage {
     }
 
     public AmazonHomePage enterProductValue(String value){
-          driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
+        try{
+            driver.findElement(By.id("twotabsearchtextbox")).sendKeys(value);
+        }
+        catch (ElementNotInteractableException e){
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].value='"+value+"';",driver.findElement(By.id("twotabsearchtextbox")));
+            js.executeScript("window.scrollTo(0,700)","");
+            js.executeScript("window.scrollTo(0,-document.body.scrollHeight)","");
+
+            Actions a = new Actions(driver);
+           // a.contextClick() - rightclick
+            a.moveToElement(driver.findElement(By.xpath("//*[text()='Create your wishlist']"))).build().perform();
+        }
+
           return this;
     }
 
@@ -48,6 +58,17 @@ public class AmazonHomePage {
         }
 
         return this;
+    }
+
+    public void clickSearch(){
+        try{
+            driver.findElement(By.id("nav-search-submit-button")).click();
+        } catch (ElementClickInterceptedException e) {
+            JavascriptExecutor js = (JavascriptExecutor)driver;
+            js.executeScript("arguments[0].click()",driver.findElement(By.id("nav-search-submit-button")));
+        }
+
+
     }
 
     public void selectCategoryDropdownValue(){
