@@ -1,0 +1,73 @@
+Technical L1 panel Questions:
+
+Tell about yourself
+
+Framework structure
+
+Selenium web driver architecture
+
+How to handle nested frames in different windows
+
+How to handle the dynamic web table in selenium
+
+How to get an xpath for dynamic web element in a webpage.
+
+Write the syntax for cucumber scenario
+
+Windows handling code for 5 windows using selenium 4
+
+ Lambda expressions syntax
+
+Difference between String and Stringbuffer
+
+Difference between hashMap and hashtable
+
+14. Cucumber annotations
+
+Difference between Test Plan and test strategy
+
+16. Java program to count the occurrence of vowels in a given string
+
+17. How to share knowledge across team members if I'm playing a role of team lead
+
+18. Bug lifecycle
+
+19. Agile ceremonies
+
+20. Will you be able to work under pressure?
+
+What is the use of property file in framework?
+
+Oops concept implementation in our framework with examples.
+
+Explain about web driver waits.
+
+Collections concepts with syntax
+
+What do you mean by recursion?
+
+Roles and responsibilities of my current project
+
+Types of frameworks which I have worked so far.
+
+Java program to reverse a sentence.
+
+How to perform STLC in my project
+
+How to connect our automation to Oracle DB
+
+Jenkins basics and how to integrate our project.
+
+About Jira and how we are using it
+
+Some scenarios regarding high priority and severity related questions
+
+Will you be ok if we gave manual testing for some time?
+
+If i found a bug in release day, how do I approach.
+
+If requirements are frequently changing, how do I approach.
+
+Able to work as individual contributor?
+
+Agile methodology and how we r performing in current project.

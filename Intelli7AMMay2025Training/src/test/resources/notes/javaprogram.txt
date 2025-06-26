@@ -1,0 +1,43 @@
+Sum of Array - https://youtu.be/rz0Pga3Phvw
+
+How to reverse a String in Java? - https://youtu.be/eXFEcC1N9Ew
+
+ Java Program to check if a vowel is present in the string? https://youtu.be/uQ0yX9wn9wU
+
+Java program to compare two Array. - https://youtu.be/Bm-xhQPps80
+
+Java program to check if the given number is Prime.
+
+Write a Java Program to find whether a string or number is palindrome or not.
+
+Program to verify whether or not a given number is an Armstrong number. to verify whether or not a given number is an Armstrong number.
+
+Factorial
+
+ 6.Check if a List of integers contains only odd numbers?
+
+How to swap two numbers without using a third variable?
+
+9.How to remove Whitespaces from String
+
+10. Check if two arrays contain same elements?
+
+11. Find second largest number in an array?
+
+12.How to merge two lists in java?
+
+13.Write a Java Program to iterate ArrayList using for-loop, while-loop, and advance for-loop.
+
+14. Write a Java Program to find the duplicate characters in a string.
+
+15.Write a program in Java to Toggle the case of every character of a string. For instance, if the input string is “ApPLe”, the output should be “aPplE”.
+
+16.Write a program in Java to count the total number of vowels and consonants in a String. The string can contain all the alphanumeric and other special characters as well. However, only the lowercase English alphabets are allowed in the String.
+
+17.Write a program to print all the unique characters in a String. For instance, if the input string is “abcb”, the output will be the characters ‘a’ and ‘c’ as they are unique. The character ‘b’ repeats twice and so it will not be printed.
+
+18.Write a program in Java to show a basic “divide by 0 exception”.
+
+19.You are given 2 strings as input. You have to check whether they are anagrams or not. Anagrams are those strings that have the same characters occurring an equal number of times in both the strings. However, the order can be different. For example, “anagram” and “nagrama” are Anagrams.
+
+20. Maximum no of Array
