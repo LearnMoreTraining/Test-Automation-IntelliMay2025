@@ -19,15 +19,30 @@ public class BrowserBase {
     public WebDriver launchBrowser()  {
      //   File f = new File("src/main/resources/frameworkconfi.properties");
         if(driver == null) {
-            if (PropertyFilehandler.getData("browser","framework").equalsIgnoreCase("chrome")) {
-                driver = new ChromeDriver();
-            } else if (PropertyFilehandler.getData("browser","framework").equalsIgnoreCase("edge")) {
-                driver = new EdgeDriver();
-            } else if (PropertyFilehandler.getData("browser","framework").equalsIgnoreCase("safari")) {
-                driver = new SafariDriver();
-            } else {
-                throw new InvalidArgumentException("Configure Valid browser");
+//            if (PropertyFilehandler.getData("browser","framework").equalsIgnoreCase("chrome")) {
+//                driver = new ChromeDriver();
+//            } else if (PropertyFilehandler.getData("browser","framework").equalsIgnoreCase("edge")) {
+//                driver = new EdgeDriver();
+//            } else if (PropertyFilehandler.getData("browser","framework").equalsIgnoreCase("safari")) {
+//                driver = new SafariDriver();
+//            } else {
+//                throw new InvalidArgumentException("Configure Valid browser");
+//            }
+
+            switch (PropertyFilehandler.getData("browser","framework").toLowerCase()){
+                case "chrome":
+                    driver = new ChromeDriver();
+                    break;
+                case "edge":
+                    driver = new EdgeDriver();
+                    break;
+                case "safari":
+                    driver = new SafariDriver();
+                    break;
+                default:
+                    throw new InvalidArgumentException("Configure Valid browser");
             }
+
             driver.manage().window().maximize();
           //  driver.get(PropertyFilehandler.getData("url","framework"));
             driver.navigate().to(PropertyFilehandler.getData("url","framework"));
