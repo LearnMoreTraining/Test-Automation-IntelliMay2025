@@ -8,3 +8,6 @@ Feature: Wiki Validation
    @drag
   Scenario: drag and drop
    Given  User handles drag and drop
+
+  Scenario: Calender Handling
+    Given user handles the calander

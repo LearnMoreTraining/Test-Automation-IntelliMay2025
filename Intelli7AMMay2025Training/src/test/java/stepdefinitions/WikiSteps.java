@@ -51,6 +51,8 @@ public class WikiSteps {
 
         Assert.assertEquals("I am an alert box!", testContext.browserBase.launchBrowser().switchTo().alert().getText());
 
+        testContext.browserBase.launchBrowser().findElement(By.id("marketDate_2")).getAttribute("style");
+        //display: block; opacity: 1; pointer-events: inherit;
 
     }
 }

@@ -62,4 +62,16 @@ public class WikiPage {
         return message;
 
     }
+
+
+    public void getColumnValues(int columnIndex){
+        driver.findElements(By.xpath("//table[@class='wikitable']/tbody/tr/td["+columnIndex+"]"));
+    }
+    public void getRowValues(int rowIndex){
+        driver.findElements(By.xpath("//table[@class='wikitable']/tbody/tr["+rowIndex+"]/td"));
+    }
+
+
+    //table[@class='wikitable']/tbody/tr[5]/td[2]
+
 }
