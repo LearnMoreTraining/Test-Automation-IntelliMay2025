@@ -1,5 +1,6 @@
 package pageobjects;
 
+import base.Encoderr;
 import base.ExcelHandler;
 import base.PropertyFilehandler;
 import org.openqa.selenium.*;
@@ -39,6 +40,7 @@ public class AmazonHomePage {
 
     public AmazonHomePage enterProductValue(String name , int row , int col){
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys(ExcelHandler.getExcelData(name , row , col));
+        driver.findElement(By.id("123")).sendKeys(Encoderr.decode64(PropertyFilehandler.getData("Password","framework")));
         return this;
     }
 
